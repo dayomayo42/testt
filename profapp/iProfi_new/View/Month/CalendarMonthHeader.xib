@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarMonthHeader" customModule="iProfi_new" customModuleProvider="target">
+            <connections>
+                <outlet property="titleCustomLabel" destination="Bmo-50-RvR" id="aaO-5v-sWT"/>
+                <outlet property="titleLabel" destination="Bmo-50-RvR" id="bwu-yx-gHI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmo-50-RvR">
+                    <rect key="frame" x="20" y="24" width="329" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="EDV-3I-BEC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                    <color key="textColor" name="darkText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Bmo-50-RvR" secondAttribute="bottom" constant="8" id="7HN-kh-Xgc"/>
+                <constraint firstAttribute="trailing" secondItem="Bmo-50-RvR" secondAttribute="trailing" constant="20" id="O6G-fD-rQr"/>
+                <constraint firstItem="Bmo-50-RvR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="Tn4-77-pFw"/>
+                <constraint firstItem="Bmo-50-RvR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="hnR-vh-HCD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-97.826086956521749" y="350.22321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="darkText">
+            <color red="0.15294117647058825" green="0.15294117647058825" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

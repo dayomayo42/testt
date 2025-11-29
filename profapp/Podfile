@@ -1,0 +1,81 @@
+project 'iProfi_new.xcodeproj'
+
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '11.0'
+
+target 'iProfi_new' do
+  use_frameworks!
+pod 'INSPhotoGallery'
+pod 'Moya', '~> 14.0'
+pod 'Moya/RxSwift'
+pod 'SVProgressHUD' 
+pod 'RxCocoa'
+pod 'RxOptional'
+pod 'AlamofireImage'
+pod 'KMPlaceholderTextView'
+pod 'OneSignalXCFramework', '>= 3.0.0', '< 4.0'
+pod 'Cosmos', '~> 21.0'
+pod 'SnapKit'
+pod 'TinkoffASDKCore'
+pod 'TinkoffASDKUI'
+pod 'PhoneNumberKit', :git => 'https://github.com/marmelroy/PhoneNumberKit', :tag => '3.6.0'
+pod 'IQKeyboardManagerSwift'
+end
+
+target 'OneSignalNotificationServiceExtension' do
+  use_frameworks!
+  pod 'OneSignalXCFramework', '>= 3.0.0', '< 4.0'
+end
+
+post_install do |installer|
+  
+  pods_project = installer.pods_project
+  
+  # Determining minimal deployment target
+  
+  deployment_target_key = 'IPHONEOS_DEPLOYMENT_TARGET'
+  deployment_targets = pods_project.build_configurations.map{ |config| config.build_settings[deployment_target_key] }
+  minimal_deployment_target = deployment_targets.min_by{ |version| Gem::Version.new(version) }
+  
+  puts 'Minimal deployment target is ' + minimal_deployment_target
+  puts 'Setting each pod deployment target to ' + minimal_deployment_target
+  
+  # Removing arm64 arch for simulator until all libraries support it
+  
+  simulator_excluded_archs_key = 'EXCLUDED_ARCHS[sdk=iphonesimulator*]'
+  simulator_excluded_archs_value = 'arm64'
+  aggregate_targets_names = installer.aggregate_targets.map{ |target| target.name }.to_set
+  
+  puts 'Removing arm64 arch for simulator'
+  
+  # Updating pods project build configurations settings
+  
+  pods_project.build_configurations.each do |config|
+    config.build_settings.delete('CODE_SIGNING_ALLOWED')
+    config.build_settings.delete('CODE_SIGNING_REQUIRED')
+  end
+  
+  # Updating pods targets build configurations settings
+  
+  pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings[deployment_target_key] = minimal_deployment_target
+      unless aggregate_targets_names.include?(target.name)
+        config.build_settings.delete(simulator_excluded_archs_key)
+        config.build_settings[simulator_excluded_archs_key] = simulator_excluded_archs_value
+      end
+    end
+  end
+  
+  # Updating aggregate targets Xcode Configuration (.xcconfig) files
+  
+  installer.aggregate_targets.each do |aggregate_target|
+    aggregate_target.xcconfigs.each do |config_name, config_file|
+      config_file.attributes.delete(simulator_excluded_archs_key)
+      config_file.attributes[simulator_excluded_archs_key] = simulator_excluded_archs_value
+      xcconfig_path = aggregate_target.xcconfig_path(config_name)
+      config_file.save_as(xcconfig_path)
+    end
+  end
+  
+end

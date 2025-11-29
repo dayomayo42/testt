@@ -1,0 +1,93 @@
+[
+    {
+        "resName":"ic_russia",
+        "code":"RU",
+        "code3":"RUS",
+        "phoneMask":"7",
+        "isSchengen": false
+    },
+    {
+        "resName":"ic_kazakhstan",
+        "code":"KZ",
+        "code3":"KAZ",
+        "phoneMask":"7",
+        "isSchengen": false
+    },
+    {
+        "resName":"ic_belarus",
+        "code":"BY",
+        "code3":"BLR",
+        "phoneMask":"375",
+        "isSchengen": false
+    },
+    {
+        "resName":"ic_ukraine",
+        "code":"UA",
+        "code3":"UKR",
+        "phoneMask":"380",
+        "isSchengen": false
+    },
+    {
+        "resName":"ic_latvia",
+        "code":"LV",
+        "code3":"LVA",
+        "phoneMask":"371",
+        "isSchengen": true
+    },
+    {
+        "resName":"ic_lithuania",
+        "code":"LT",
+        "code3":"LTU",
+        "phoneMask":"370",
+        "isSchengen": true
+    },
+    {
+        "resName":"ic_estonia",
+        "code":"EE",
+        "code3":"EST",
+        "phoneMask":"372",
+        "isSchengen": true
+    },
+    {
+        "resName":"ic_slovakia",
+        "code":"SK",
+        "code3":"SVK",
+        "phoneMask":"421",
+        "isSchengen": true
+    },
+    {
+        "resName":"ic_czech_republic",
+        "code":"CZ",
+        "code3":"CZE",
+        "phoneMask":"420",
+        "isSchengen": true
+    },
+    {
+        "resName":"ic_kyrgyzstan",
+        "code":"KG",
+        "code3":"KGZ",
+        "phoneMask":"996",
+        "isSchengen": false
+    },
+	{
+		"resName":"ic_armenia",
+		"code":"AM",
+		"code3":"ARM",
+		"phoneMask":"374",
+		"isSchengen": false
+	},
+    {
+        "resName":"ic_germany",
+        "code":"DE",
+        "code3":"DEU",
+        "phoneMask":"49",
+        "isSchengen": true
+    },
+    {
+        "resName":"ic_israel",
+        "code":"IL",
+        "code3":"ISR",
+        "phoneMask":"972",
+        "isSchengen": true
+    }
+]

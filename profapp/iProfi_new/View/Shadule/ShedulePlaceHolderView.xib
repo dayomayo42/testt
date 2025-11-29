@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShedulePlaceHolderView" customModule="iProfi_new" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="Uis-MU-vz1" id="xIf-6c-FHn"/>
+                <outlet property="goToSheduleSettingButton" destination="X5P-xZ-SUd" id="ryj-Zc-BFh"/>
+                <outlet property="titleLabel" destination="Vzh-Ku-KHo" id="mVk-Ko-7NI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="135"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQa-u0-UDP">
+                    <rect key="frame" x="0.0" y="0.0" width="407" height="135"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тут пусто" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-Ku-KHo">
+                            <rect key="frame" x="158" y="8" width="91" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расписание на данный день недели не заполнено" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uis-MU-vz1">
+                            <rect key="frame" x="20" y="48" width="367" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" name="lightText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5P-xZ-SUd">
+                            <rect key="frame" x="16" y="82" width="375" height="28.333333333333329"/>
+                            <color key="backgroundColor" name="appBlue"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Расписание">
+                                <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onGoToSheduleTapped" destination="-1" eventType="touchUpInside" id="nKk-WT-HOd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Uis-MU-vz1" firstAttribute="leading" secondItem="iQa-u0-UDP" secondAttribute="leading" constant="20" id="Ew7-Ic-Ahq"/>
+                        <constraint firstItem="Vzh-Ku-KHo" firstAttribute="centerX" secondItem="iQa-u0-UDP" secondAttribute="centerX" id="FNC-SN-2de"/>
+                        <constraint firstItem="Vzh-Ku-KHo" firstAttribute="top" secondItem="iQa-u0-UDP" secondAttribute="top" constant="8" id="Jps-m8-CqY"/>
+                        <constraint firstAttribute="bottom" secondItem="Uis-MU-vz1" secondAttribute="bottom" priority="250" constant="59" id="Szl-hV-4Hu"/>
+                        <constraint firstAttribute="trailing" secondItem="X5P-xZ-SUd" secondAttribute="trailing" constant="16" id="b2B-fh-ruD"/>
+                        <constraint firstItem="Uis-MU-vz1" firstAttribute="top" secondItem="Vzh-Ku-KHo" secondAttribute="bottom" constant="16" id="j0q-y9-byZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Uis-MU-vz1" secondAttribute="trailing" constant="20" id="llz-Iv-eFg"/>
+                        <constraint firstItem="X5P-xZ-SUd" firstAttribute="top" secondItem="Uis-MU-vz1" secondAttribute="bottom" constant="16" id="o3K-qS-O7P"/>
+                        <constraint firstItem="X5P-xZ-SUd" firstAttribute="leading" secondItem="iQa-u0-UDP" secondAttribute="leading" constant="16" id="zeA-Ti-heZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iQa-u0-UDP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LCh-DN-W8c"/>
+                <constraint firstAttribute="bottom" secondItem="iQa-u0-UDP" secondAttribute="bottom" id="hTX-ug-ruV"/>
+                <constraint firstAttribute="trailing" secondItem="iQa-u0-UDP" secondAttribute="trailing" id="sYa-40-HbQ"/>
+                <constraint firstItem="iQa-u0-UDP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wE1-B9-t7V"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="150.38167938931298" y="205.98591549295776"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="appBlue">
+            <color red="0.0" green="0.44313725490196076" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="lightText">
+            <color red="0.47099998593330383" green="0.5130000114440918" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Records-->
+        <scene sceneID="Ke0-iY-Ct8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Records" id="jo4-oW-Bx6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="n8I-7c-Ynb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhs-3w-HQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-904" y="674"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="zmK-HR-hIM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Info" id="jTq-A5-de9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BnD-if-LxI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSw-Gv-7IW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-856" y="-58"/>
+        </scene>
+        <!--Инфоблок-->
+        <scene sceneID="uRO-im-eEw">
+            <objects>
+                <navigationController id="ycD-eA-3Iq" customClass="NavigationController" customModule="iProfi_new" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Инфоблок" image="info" id="qiA-68-r5p"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="twp-Kw-bn5">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jTq-A5-de9" kind="relationship" relationship="rootViewController" id="ARR-Pw-cD2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vkr-gs-jIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-248" y="-66"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="TMz-fe-dZc">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" modalPresentationStyle="overFullScreen" id="STv-mg-9tX" customClass="TabBarController" customModule="iProfi_new" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AAf-6P-l9Y"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="bDY-hs-iCM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="appBlue"/>
+                        <color key="barTintColor" name="white"/>
+                        <color key="selectedImageTintColor" name="appBlue"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="WGX-oA-FTW" kind="relationship" relationship="viewControllers" id="WPc-bO-8yF"/>
+                        <segue destination="KL1-cu-kJu" kind="relationship" relationship="viewControllers" id="yaN-Z7-JAr"/>
+                        <segue destination="PNo-iC-eUF" kind="relationship" relationship="viewControllers" id="dk6-4o-fPD"/>
+                        <segue destination="Tel-0j-SsQ" kind="relationship" relationship="viewControllers" id="fyv-fb-dcu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xex-hj-gX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="503" y="233"/>
+        </scene>
+        <!--Записи-->
+        <scene sceneID="Sbu-rv-LL4">
+            <objects>
+                <navigationController id="WGX-oA-FTW" customClass="NavigationController" customModule="iProfi_new" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Записи" image="records" id="fwv-dy-cBk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lb0-YJ-tB8">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jo4-oW-Bx6" kind="relationship" relationship="rootViewController" id="jw9-90-53e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uiZ-Oe-VSj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-381" y="741"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="5HR-WC-Nnj">
+            <objects>
+                <navigationController id="Tel-0j-SsQ" customClass="NavigationController" customModule="iProfi_new" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Профиль" image="profile" id="fZU-As-KMf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ta1-KT-iW3">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0v7-8m-Eir" kind="relationship" relationship="rootViewController" id="B2M-9O-seN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrk-sr-aVP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274" y="-66"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="mII-db-Iif">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="0v7-8m-Eir" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Huk-lt-Oc8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbb-Nd-n15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="-66"/>
+        </scene>
+        <!--Финансы-->
+        <scene sceneID="m31-dI-yZd">
+            <objects>
+                <navigationController id="PNo-iC-eUF" customClass="NavigationController" customModule="iProfi_new" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Финансы" image="finance" id="HF4-io-gMB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0wP-24-02L">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xnV-fJ-F4D" kind="relationship" relationship="rootViewController" id="9oW-en-727"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fa0-Bl-SzU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274" y="674"/>
+        </scene>
+        <!--Finance-->
+        <scene sceneID="6rv-b9-5v2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Finance" id="xnV-fJ-F4D" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YMo-n6-srO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYB-KV-y5q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891" y="674"/>
+        </scene>
+        <!--Клиенты-->
+        <scene sceneID="Ieu-FT-jy1">
+            <objects>
+                <navigationController id="KL1-cu-kJu" customClass="NavigationController" customModule="iProfi_new" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Клиенты" image="clients" id="2ug-gy-2MF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZEc-B4-YWE">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9QF-ul-5iP" kind="relationship" relationship="rootViewController" id="DOu-6Q-1pz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSY-mO-5CZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="503" y="1221"/>
+        </scene>
+        <!--Clients-->
+        <scene sceneID="O8J-p6-luw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Clients" id="9QF-ul-5iP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tmM-i5-q23"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBZ-Lg-zw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="1221"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clients" width="24" height="25"/>
+        <image name="finance" width="25" height="23"/>
+        <image name="info" width="21" height="25"/>
+        <image name="profile" width="21" height="25"/>
+        <image name="records" width="21" height="25"/>
+        <namedColor name="appBlue">
+            <color red="0.0" green="0.44313725490196076" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

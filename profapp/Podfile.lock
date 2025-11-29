@@ -1,0 +1,114 @@
+PODS:
+  - Alamofire (5.7.1)
+  - AlamofireImage (4.2.0):
+    - Alamofire (~> 5.4)
+  - Cosmos (21.0.0)
+  - INSPhotoGallery (1.2.8)
+  - IQKeyboardManagerSwift (6.5.11)
+  - KMPlaceholderTextView (1.4.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - OneSignalXCFramework (3.12.5):
+    - OneSignalXCFramework/OneSignalCore (= 3.12.5)
+    - OneSignalXCFramework/OneSignalExtension (= 3.12.5)
+    - OneSignalXCFramework/OneSignalOutcomes (= 3.12.5)
+  - OneSignalXCFramework/OneSignalCore (3.12.5)
+  - OneSignalXCFramework/OneSignalExtension (3.12.5):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalOutcomes
+  - OneSignalXCFramework/OneSignalOutcomes (3.12.5):
+    - OneSignalXCFramework/OneSignalCore
+  - PhoneNumberKit (3.6.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.6.0)
+    - PhoneNumberKit/UIKit (= 3.6.0)
+  - PhoneNumberKit/PhoneNumberKitCore (3.6.0)
+  - PhoneNumberKit/UIKit (3.6.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - RxCocoa (5.1.3):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxOptional (4.1.0):
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.3):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.3)
+  - SnapKit (5.6.0)
+  - SVProgressHUD (2.2.5)
+  - TinkoffASDKCore (2.10.4)
+  - TinkoffASDKUI (2.10.4):
+    - TinkoffASDKCore
+
+DEPENDENCIES:
+  - AlamofireImage
+  - Cosmos (~> 21.0)
+  - INSPhotoGallery
+  - IQKeyboardManagerSwift
+  - KMPlaceholderTextView
+  - Moya (~> 14.0)
+  - Moya/RxSwift
+  - OneSignalXCFramework (< 4.0, >= 3.0.0)
+  - PhoneNumberKit (from `https://github.com/marmelroy/PhoneNumberKit`, tag `3.6.0`)
+  - RxCocoa
+  - RxOptional
+  - SnapKit
+  - SVProgressHUD
+  - TinkoffASDKCore
+  - TinkoffASDKUI
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - Cosmos
+    - INSPhotoGallery
+    - IQKeyboardManagerSwift
+    - KMPlaceholderTextView
+    - Moya
+    - OneSignalXCFramework
+    - RxCocoa
+    - RxOptional
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - SVProgressHUD
+    - TinkoffASDKCore
+    - TinkoffASDKUI
+
+EXTERNAL SOURCES:
+  PhoneNumberKit:
+    :git: https://github.com/marmelroy/PhoneNumberKit
+    :tag: 3.6.0
+
+CHECKOUT OPTIONS:
+  PhoneNumberKit:
+    :git: https://github.com/marmelroy/PhoneNumberKit
+    :tag: 3.6.0
+
+SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
+  INSPhotoGallery: ad317cb9a59c7a5f08550e4155b49622c24dcab3
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
+  KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  OneSignalXCFramework: 4afdd14f6fa769eadf141209037e3eac5890beb9
+  PhoneNumberKit: c48951f48bb0a5bcfa4e86e75b77a244256b31ad
+  RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
+  RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
+  RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
+  RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TinkoffASDKCore: f05579bd000adc47e2aa21b3042ed466297fc6bd
+  TinkoffASDKUI: d6dc0e0b53bf862633d041f26cc31382a66afb03
+
+PODFILE CHECKSUM: 67133a51107222d1b5c355ab5f062abdb1b7cfd7
+
+COCOAPODS: 1.14.2

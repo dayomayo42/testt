@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoInternetPlugView" customModule="iProfi_new" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="hP1-wd-67f"/>
+                <outlet property="descriptionLabel" destination="aOS-Lb-H4e" id="82Y-7D-FYq"/>
+                <outlet property="reconnectButton" destination="dNR-cA-gir" id="meE-rr-WvT"/>
+                <outlet property="titleLabel" destination="cbX-Qp-DVx" id="pzb-fo-84B"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXh-CI-Hfq">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_no_internet" translatesAutoresizingMaskIntoConstraints="NO" id="xwa-XH-obn">
+                            <rect key="frame" x="157" y="285" width="100" height="90"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="PFZ-Gf-Tky"/>
+                                <constraint firstAttribute="height" constant="90" id="PcE-fx-JMG"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbX-Qp-DVx">
+                            <rect key="frame" x="24" y="399" width="366" height="20.5"/>
+                            <string key="text">Нет подключение к интернету
+</string>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOS-Lb-H4e">
+                            <rect key="frame" x="24" y="427.5" width="366" height="41"/>
+                            <string key="text">Проверьте соединение с Интернетом
+и повторите попытку.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-cA-gir">
+                            <rect key="frame" x="24" y="498.5" width="366" height="30"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Повторить"/>
+                            <connections>
+                                <action selector="tryToReconnect" destination="-1" eventType="touchUpInside" id="lTA-vI-q2j"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="cbX-Qp-DVx" firstAttribute="top" secondItem="xwa-XH-obn" secondAttribute="bottom" constant="24" id="9uj-vU-CMZ"/>
+                        <constraint firstItem="xwa-XH-obn" firstAttribute="centerX" secondItem="aXh-CI-Hfq" secondAttribute="centerX" id="GNO-Rd-tps"/>
+                        <constraint firstAttribute="trailing" secondItem="aOS-Lb-H4e" secondAttribute="trailing" constant="24" id="HH8-SA-yS7"/>
+                        <constraint firstItem="cbX-Qp-DVx" firstAttribute="centerX" secondItem="aXh-CI-Hfq" secondAttribute="centerX" id="LI9-uK-LAr"/>
+                        <constraint firstItem="cbX-Qp-DVx" firstAttribute="leading" secondItem="aXh-CI-Hfq" secondAttribute="leading" constant="24" id="OBe-zq-B9d"/>
+                        <constraint firstAttribute="trailing" secondItem="cbX-Qp-DVx" secondAttribute="trailing" constant="24" id="QTn-O3-Yp0"/>
+                        <constraint firstItem="aOS-Lb-H4e" firstAttribute="top" secondItem="cbX-Qp-DVx" secondAttribute="bottom" constant="8" id="Wz0-uD-v2q"/>
+                        <constraint firstItem="aOS-Lb-H4e" firstAttribute="leading" secondItem="aXh-CI-Hfq" secondAttribute="leading" constant="24" id="Y6s-nN-RBu"/>
+                        <constraint firstAttribute="trailing" secondItem="dNR-cA-gir" secondAttribute="trailing" constant="24" id="pdW-b2-Kbg"/>
+                        <constraint firstItem="dNR-cA-gir" firstAttribute="leading" secondItem="aXh-CI-Hfq" secondAttribute="leading" constant="24" id="uKY-uf-Cj8"/>
+                        <constraint firstItem="dNR-cA-gir" firstAttribute="top" secondItem="aOS-Lb-H4e" secondAttribute="bottom" constant="30" id="wAc-ac-eDK"/>
+                        <constraint firstItem="cbX-Qp-DVx" firstAttribute="centerY" secondItem="aXh-CI-Hfq" secondAttribute="centerY" id="x67-x7-2T9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="aXh-CI-Hfq" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ayh-18-r3I"/>
+                <constraint firstItem="aXh-CI-Hfq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Xw9-hJ-qm2"/>
+                <constraint firstItem="aXh-CI-Hfq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="mNC-bf-IKk"/>
+                <constraint firstItem="aXh-CI-Hfq" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="rRy-0r-Reg"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="94"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_no_internet" width="72" height="72"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
